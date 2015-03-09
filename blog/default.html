@@ -1,0 +1,14 @@
+{% capture content %}
+  <section class="layer blog">
+    {% if type == 'post' %}
+      {% assign post = current %}
+      {% include 'includes/post' %}
+    {% else %}
+      {% for post in posts %}
+        {% include 'includes/post' %}
+      {% endfor %}
+    {% endif %}
+  </section>
+{% endcapture %}
+
+{% include 'layouts/default' %}
