@@ -8,19 +8,12 @@
   <link rel="canonical" href="{{ permalink }}" />
   <link rel="alternate" type="application/rss+xml" href="{{ site.feed_url }}" />
   <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Karla:700,400,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div class="wrap">
 
-    <header class="primary-header">
-      <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
-
-      <ul class="page-menu">
-      {% for page in site.pages %}
-        <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
-      {% endfor %}
-      </ul>
-    </header>
+    {% include 'includes/header' %}
 
     <main class="content">
 
