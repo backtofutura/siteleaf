@@ -1,14 +1,25 @@
 {% capture content %}
+<div class="container">
   <section class="layer blog">
     {% if type == 'post' %}
       {% assign post = current %}
       {% include 'includes/project' %}
     {% else %}
+
+      <ul class="project-list">
       {% for post in posts %}
-        {% include 'includes/project' %}
+
+        <li class="project-item">
+          <a href="{{ post.url }}">
+            <img src="{{ post.assets.first }}">
+          </a>
+        </li>
+
       {% endfor %}
+      </ul>
     {% endif %}
   </section>
+</div>
 {% endcapture %}
 
 {% include 'layouts/default' %}
