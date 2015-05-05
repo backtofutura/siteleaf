@@ -62,14 +62,14 @@ html {
 
 @media (min-width: 768px) {
   html {
-    font-size: 112.5%;
+    /*font-size: 112.5%;*/
   }
 }
 
 body {
-  font-family: lora, Georgia, serif;
+  font-family: Lora, Georgia, serif;
   font-size: 1em;
-  line-height: 1.666667;
+  line-height: 1.75;
 }
 
 img, video, object { max-width: 100% }
@@ -84,6 +84,48 @@ article, header, nav, section {
   clear: both;
 }
 
+/* Typography
+================================ */
+
+h1, h2 {
+  font-family: Karla, Helvetica, sans-serif;
+  font-size: 1.875rem;
+  color: #4a4a4a;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h3 {
+  font-family: Lora, Georgia, serif;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.2px;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+  color: #3f484f;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.text-caption {
+  font-family: Karla, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  color: #9b9b9b;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
 /* Header
 /* ======================================== */
 
@@ -93,10 +135,6 @@ article, header, nav, section {
   font-family: Karla, Helvetica, sans-serif;
   letter-spacing: 0.5px;
   color: #4a4a4a;
-}
-
-.site-header {
-
 }
 
 .site-name {
@@ -151,6 +189,28 @@ article, header, nav, section {
   margin-left: 10px;
 }
 
+.project-hero {
+  height: 400px;
+}
+
+.project-header {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.project-metadata {
+  font-family: Karla, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #9b9b9b;
+}
+
+.pullquote {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #9b9b9b;
+}
+
 @media only screen and (max-width: 480px){
   .project-item {
     width: 100%;
@@ -189,13 +249,8 @@ article, header, nav, section {
 
 }
 
-/* Text
-================================ */
 
-a {
-  font-family: Karla, Helvetica, sans-serif;
-  text-decoration: none;
-}
+
 
 /* Header */
 
@@ -236,6 +291,9 @@ a {
 }
 /* I got 99 problems, but this last line ain't one */
 
+.row {
+  display: block;
+}
 
 
 /* Grid
@@ -323,3 +381,14 @@ a {
   .offset-by-one-half.column,
   .offset-by-one-half.columns     { margin-left: 52%; }
 }
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }

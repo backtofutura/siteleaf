@@ -14,16 +14,18 @@
 <body>
   <header class="site-header clearfix" role="banner">
     <div class="container">
-    <h2 class="site-intro">
+    <div class="site-intro">
       <a class="site-name" href="/">Jessie Ren</a> is enjoying cruffins in foggy San Francisco.
-    </h2>
+    </div>
     <nav class="site-nav" role="navigation">
       <ul class="site-menu">
         {% for page in site.pages %}
-        <li class="site-menu-item"><a href="{{ page.url }}"
-               {% if page.url == url %} class="is-active"{% endif %}>
-               {{ page.title }}</a>
-        </li>
+          {% if page != "Home" %}
+          <li class="site-menu-item"><a href="/{{ page.slug }}"
+             {% if page.slug == slug %} class="is-active"{% endif %}>
+             {{ page.title }}</a>
+          </li>
+          {% endif %}
         {% endfor %}
       </ul>
     </nav>
@@ -31,11 +33,11 @@
   </header>
 
   <div class="wrap">
-  <main class="content">
+    <main class="content">
 
-    {{ content }}
+      {{ content }}
 
-  </main>
+    </main>
   </div>
 
 </body>

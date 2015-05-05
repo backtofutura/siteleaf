@@ -1,7 +1,32 @@
 <article class="project">
-  <h1 class="project-title">
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </h1>
-  <img src="{{ post.assets.first }}">
+
+  <div class="project-hero" style="
+    background: url('{{ post.assets.first }}') no-repeat center center;
+    background-size: cover;">
+  </div>
+
+  <section class="project-header row">
+    <div class="nine columns">
+      <h1 class="project-title">{{ post.title }}</h1>
+      <p class="project-intro">{{ post.meta['intro'] }}</p>
+    </div>
+    <section class="project-metadata three columns">
+      <time class="project-date">{{ post.meta['date'] }}</time>
+      <ul>
+      {% for category in post.taxonomy['Categories'] %}
+        <li>&mdash;{{ category }}</li>
+      {% endfor %}
+      </ul>
+      <a class="project-link" href="{{ post.meta['link'] }}">
+        {{ post.meta['link'] }}
+      </a>
+    </section>
+  </section>
+
   {{ post.body }}
+
+  {% if parent %}
+    <a href="{{ parent.url }}">&larr; Back to {{ parent.title }}</a>
+  {% endif %}
+
 </article>
