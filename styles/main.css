@@ -67,7 +67,7 @@ html {
 }
 
 body {
-  font-family: Lora, Georgia, serif;
+  font-family: Georgia, helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.75;
 }
@@ -97,8 +97,12 @@ h1 {
   font-weight: 700;
 }
 
+h2 {
+  font-weight: 700;
+}
+
 h3 {
-  font-family: Lora, Georgia, serif;
+  font-family: Karla, Helvetica, sans-serif;
   font-weight: 700;
   font-style: italic;
   letter-spacing: 0.2px;
@@ -130,8 +134,8 @@ a {
 /* ======================================== */
 
 .site-header {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 3em;
+  padding-bottom: 2em;
   font-family: Karla, Helvetica, sans-serif;
   letter-spacing: 0.5px;
   color: #4a4a4a;
@@ -159,7 +163,7 @@ a {
 
 @media (min-width: 550px) {
   .site-header {
-    border-bottom: 1px solid #eee;
+    /*border-bottom: 1px solid #eee;*/
   }
 
   .site-intro {
@@ -203,6 +207,7 @@ a {
   font-size: 0.875rem;
   font-style: italic;
   color: #9b9b9b;
+  margin-top: 20px;
 }
 
 .pullquote {
@@ -221,7 +226,7 @@ a {
 ================================ */
 
 .wrap {
-  margin: 60px auto;
+  margin: 30px auto;
   max-width: 1200px;
   overflow: hidden;
   width: 90%;
