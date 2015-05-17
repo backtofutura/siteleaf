@@ -6,19 +6,20 @@
       {% include 'includes/project' %}
     {% else %}
 
-      <ul class="project-list">
-      {% for post in posts %}
+    <div class="project-list">
+    {% for post in posts %}
 
-        <li class="project-item">
-          <a href="{{ post.url }}">
-            <img class="lazyload"
-                 data-src="{{ post.assets.first }}"
-                 src="/assets/img/placeholder.png">
-          </a>
-        </li>
+      <a class="project-item" href="{{ post.url }}">
+        <h4 class="overlay-title">
+          {{ post.title }}
+        </h4>
+        <img class="lazyload"
+             data-src="{{ post.assets.first }}"
+             src="/assets/img/placeholder.png">
+      </a>
 
-      {% endfor %}
-      </ul>
+    {% endfor %}
+    </div>
     {% endif %}
   </section>
 </div>

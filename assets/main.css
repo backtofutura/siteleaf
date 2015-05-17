@@ -47,6 +47,13 @@ table {
 }
 
 /* CUSTOM STYLES START HERE */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
 
 html {
   /* optimize font rendering */
@@ -67,7 +74,7 @@ html {
 }
 
 body {
-  font-family: Georgia, helvetica, sans-serif;
+  font-family: Georgia, serif;
   font-size: 1em;
   line-height: 1.75;
 }
@@ -106,6 +113,11 @@ h3 {
   font-weight: 700;
   font-style: italic;
   letter-spacing: 0.2px;
+}
+
+h4 {
+  font-family: Karla, Helvetica, sans-serif;
+  line-height: 1.3;
 }
 
 p {
@@ -180,18 +192,69 @@ a {
 ================================ */
 
 .project-item {
-  width: 48%;
-  display: inline-block;
-  margin-bottom: 10px;
+  width: 50%;
+  float: left;
+  margin-top: 2%;
 }
 
 .project-item:nth-child(odd) {
-  margin-right: 10px;
+  padding-right: 1%;
 }
 
 .project-item:nth-child(even) {
-  margin-left: 10px;
+  padding-left: 1%;
 }
+
+.project-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.5s ease-out;
+  margin: 0;
+  margin-top: -1.66em;
+}
+
+.project-item:hover img {
+          filter: brightness(20%);
+  -webkit-filter: brightness(20%);
+}
+
+.project-item .overlay-title {
+  display: block;
+  position: relative;
+  top: 5em;
+  z-index: 100;
+
+  font-size: 1.5em;
+  text-align: center;
+
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.project-item:hover .overlay-title {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .project-item .overlay-title {
+    font-size: 1.2em;
+    top: 4em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .project-item {
+    width: 100%;
+    float: none;
+  }
+
+  .project-item .overlay-title {
+    top: 6em;
+  }
+}
+
+
 
 .project-hero {
   height: 400px;
@@ -229,7 +292,6 @@ a {
   margin: 30px auto;
   max-width: 1200px;
   overflow: hidden;
-  width: 90%;
 }
 
 .primary-header {
@@ -239,19 +301,14 @@ a {
   margin: 0 auto;*/
 }
 
-.content {
-
-}
-
 @media only screen and (max-width: 1085px){
   body{
     font-size: 16px;
   }
 
-  .wrap{
+  .wrap {
     margin: 15px auto;
   }
-
 }
 
 

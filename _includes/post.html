@@ -1,9 +1,9 @@
 <article>
   <h2 class="title">
     {% if type == 'post' %}
-      {{post.title}}
+      {{ post.title }}
     {% else %}
-      <a href="{{post.url}}">{{post.title}}</a>
+      <a href="{{post.url}}">{{ post.title }}</a>
     {% endif %}
   </h2>
   <header class="blog-byline">
@@ -14,10 +14,10 @@
     {% if post.author.firstname %} by {{post.author.firstname}} {{post.author.lastname}}{% endif %}
   </header>
   {% if type == 'post' %}
-    {{post.body}}
+    {{ post.body }}
     <p class="back"><a href="{{parent.url}}">&larr; Back to {{parent.title}}</a></p>
   {% else %}
-    {{post.excerpt}}
+    {{ post.excerpt }}
     {% if post.excerpt != post.body %}
     <p class="more"><a href="{{post.url}}">Read more &rarr;</a></p>
     {% endif %}
