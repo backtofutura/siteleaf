@@ -11,7 +11,9 @@
 
         <li class="project-item">
           <a href="{{ post.url }}">
-            <img src="{{ post.assets.first }}">
+            <img class="lazyload"
+                 data-src="{{ post.assets.first }}"
+                 src="/assets/img/placeholder.png">
           </a>
         </li>
 

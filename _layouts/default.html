@@ -8,8 +8,20 @@
   <title>{{ site.title }} | {{ title }}</title>
   <link rel="canonical" href="{{ permalink }}" />
   <link rel="alternate" type="application/rss+xml" href="{{ site.feed_url }}" />
-  <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/main.css" />
   <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Karla:700,400,400italic' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="/assets/lazysizes.min.js" async=""></script>
+  <style>
+    .lazyload,
+    .lazyloading {
+      opacity: 0;
+    }
+    .lazyloaded {
+      opacity: 1;
+      transition: opacity 300ms;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header clearfix" role="banner">
@@ -40,5 +52,6 @@
     </main>
   </div>
 
+  <script src="/assets/main.js"></script>
 </body>
 </html>

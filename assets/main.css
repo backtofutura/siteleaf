@@ -304,26 +304,19 @@ a {
 /* Animation
 /* ======================================== */
 /* Effect 1: opacity */
-
-.lazyload, .lazyloading {
-  opacity: 0;
-}
-
-.lazyloaded {
-  opacity: 1;
-  transition: 300ms opacity;
-  -webkit-animation: fadeIn 0.65s ease forwards;
-  animation: fadeIn 0.65s ease forwards;
+.project-item.animate {
+	-webkit-animation: fadeIn 0.65s ease forwards;
+	animation: fadeIn 0.65s ease forwards;
 }
 
 @-webkit-keyframes fadeIn {
-  0% { }
-  100% { opacity: 1; }
+	0% { }
+	100% { opacity: 1; }
 }
 
 @keyframes fadeIn {
-  0% { }
-  100% { opacity: 1; }
+	0% { }
+	100% { opacity: 1; }
 }
 
 
