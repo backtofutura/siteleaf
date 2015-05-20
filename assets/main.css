@@ -74,7 +74,7 @@ html {
 }
 
 body {
-  font-family: Karla, Georiga, sans-serif;
+  font-family: Karla, Georgia, sans-serif;
   font-size: 1em;
   line-height: 1.75;
 }
@@ -180,7 +180,7 @@ a:hover {
 
 @media (min-width: 550px) {
   .site-header {
-    /*border-bottom: 1px solid #eee;*/
+  /*border-bottom: 1px solid #eee;*/
   }
 
   .site-intro {
