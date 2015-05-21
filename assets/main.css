@@ -46,7 +46,10 @@ table {
   border-spacing: 0;
 }
 
-/* CUSTOM STYLES START HERE */
+/************************************************
+    CUSTOM STYLES START HERE
+ ************************************************/
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -89,6 +92,16 @@ article, header, nav, section {
   content: "";
   display: table;
   clear: both;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.site-content {
+  flex: 1 0 auto;
 }
 
 /* Typography
@@ -336,6 +349,11 @@ a:hover {
   margin: 0.5em 1em;
   padding: 0.5em 0;
   list-style: none;
+}
+
+/* Footer */
+.site-footer {
+  padding: 1em 0;
 }
 
 /* Content */
